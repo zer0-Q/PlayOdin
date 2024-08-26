@@ -42,6 +42,7 @@ body {
     height: 100vh;
     object-fit: cover; /* Ensure the video covers the entire viewport */
     z-index: 0; /* Ensure the video is behind the main content */
+    overflow: hidden; /* Prevent scrollbars */
 }
 
 /* Fade-Out Animation */
