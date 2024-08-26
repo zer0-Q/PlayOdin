@@ -14,24 +14,11 @@
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    background-color: #f0f0f0;
     overflow: hidden; /* Prevent scrollbars */
-}
-
-/* Intro Video */
-.intro-video {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 500px; /* Fixed width */
-    height: 900px; /* Fixed height */
-    object-fit: cover; /* Cover the entire area */
-    z-index: 0; /* Ensure the video is behind the main content */
 }
 
 /* Container with Background Image */
 .container {
-    display: none; /* Hide the main content initially */
     width: 500px;
     height: 900px;
     position: relative;
@@ -108,4 +95,9 @@ footer {
     width: 100%;
     text-align: center;
     color: #fff; /* White text for visibility */
+}
+
+/* Hide the container initially for the intro video */
+.hidden {
+    display: none;
 }
