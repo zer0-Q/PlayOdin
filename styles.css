@@ -1,57 +1,48 @@
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
-/* Import Custom Font */
-@font-face {
-    font-family: 'PizzaMan';
-    src: url('fonts/PizzaMan.woff2') format('woff2'),
-         url('fonts/PizzaMan.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-/* General Styles */
-body {
+/* Basic Reset */
+body, html {
     margin: 0;
-    font-family: 'Roboto', sans-serif;
-    overflow: hidden; /* Prevent scrollbars */
+    padding: 0;
+    width: 100%;
+    height: 100%;
 }
 
-/* Container with Background Image */
+/* Intro Video */
+.intro-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the entire area */
+    z-index: 1; /* Ensure the video is behind the main content */
+}
+
+/* Main Content Container */
 .container {
+    display: none; /* Hide initially */
     width: 500px;
     height: 900px;
     position: relative;
+    margin: auto;
+    background-color: #f0f0f0; /* Background color for the container */
     text-align: center;
-    color: #fff; /* White text for visibility */
-    background-image: url('img/background.png'); /* Path to background image */
-    background-size: cover; /* Ensure the image covers the container */
-    background-position: center; /* Center the background image */
-    background-repeat: no-repeat; /* Prevent repeating the background image */
-}
-
-/* Header */
-header {
-    position: absolute;
-    top: 20px;
-    width: 100%;
-    z-index: 1; /* Ensure header is above the background */
+    overflow: hidden;
+    z-index: 2; /* Ensure content is above the video */
 }
 
 /* Title */
 .title {
-    font-family: 'PizzaMan', sans-serif; /* Use PizzaMan font for the title */
+    font-family: 'PizzaMan', sans-serif; /* Custom font for the title */
     font-size: 3rem;
-    text-transform: uppercase;
-    color: #fff; /* White text for visibility */
-    margin: 0;
+    color: #333; /* Dark color for visibility */
+    margin: 20px 0;
 }
 
 /* Logo */
 .logo {
-    width: 150px; /* Set a fixed width for the logo */
+    width: 150px; /* Fixed size for the logo */
     height: auto;
-    margin: 20px auto; /* Center the logo horizontally */
+    margin: 20px auto; /* Center horizontally */
 }
 
 /* Game Content */
@@ -61,9 +52,7 @@ header {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
-    max-width: 500px; /* Ensure it doesn't exceed the container width */
     text-align: center;
-    color: #fff; /* White text for visibility */
 }
 
 /* Description Text */
@@ -86,18 +75,4 @@ header {
 
 .start-button:hover {
     background-color: #0056b3;
-}
-
-/* Footer */
-footer {
-    position: absolute;
-    bottom: 20px;
-    width: 100%;
-    text-align: center;
-    color: #fff; /* White text for visibility */
-}
-
-/* Hide the container initially for the intro video */
-.hidden {
-    display: none;
 }
