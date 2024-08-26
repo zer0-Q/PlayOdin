@@ -8,25 +8,30 @@ body, html {
     justify-content: center;
     align-items: center;
     font-family: 'Arial', sans-serif; /* Replace with your desired font */
+    overflow: hidden; /* Prevent scrolling */
 }
 
-/* Background Image */
-body {
-    background-image: url('img/background.png'); /* Path to your background image */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-    width: 100vw;
+/* Background Image Container */
+.background-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Send the background behind the content */
 }
 
-/* Overlay Content Container */
-.overlay {
+.background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the entire background */
+}
+
+/* Content Container */
+.content-container {
     text-align: center;
     color: white;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better contrast */
-    padding: 20px;
-    border-radius: 10px;
+    z-index: 1; /* Ensure content stays above the background */
 }
 
 /* Title Styling */
