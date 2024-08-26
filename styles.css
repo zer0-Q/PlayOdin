@@ -29,6 +29,8 @@ body {
     margin: 0 auto;
     text-align: center;
     color: #333;
+    position: relative;
+    z-index: 1; /* Ensure it is above the video */
 }
 
 /* Video Styles */
@@ -39,7 +41,7 @@ body {
     width: 100vw;
     height: 100vh;
     object-fit: cover; /* Ensure the video covers the entire viewport */
-    z-index: 1000; /* Make sure the video is above everything else */
+    z-index: 0; /* Ensure the video is behind the main content */
 }
 
 /* Fade-Out Animation */
@@ -53,7 +55,6 @@ body {
     }
     to {
         opacity: 0;
-        display: none;
     }
 }
 
