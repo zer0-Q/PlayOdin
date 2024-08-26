@@ -1,19 +1,60 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Import Custom Font */
+@font-face {
+    font-family: 'PizzaMan';
+    src: url('fonts/PizzaMan.woff2') format('woff2'),
+         url('fonts/PizzaMan.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* General Styles */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     background-color: #f0f0f0;
+    overflow: hidden; /* Prevent scrollbars */
 }
 
 /* Container */
 .container {
-    display: flex;
+    display: none; /* Hide the main content initially */
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    width: 500px;
+    height: 900px;
+    margin: 0 auto;
     text-align: center;
     color: #333;
+}
+
+/* Video Styles */
+.intro-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover; /* Ensure the video covers the entire viewport */
+    z-index: 1000; /* Make sure the video is above everything else */
+}
+
+/* Fade-Out Animation */
+.fade-out {
+    animation: fadeOut 2s forwards; /* Fade out over 2 seconds */
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        display: none;
+    }
 }
 
 /* Header */
@@ -21,16 +62,28 @@ header {
     margin-bottom: 20px;
 }
 
+/* Logo */
 .logo {
-    max-width: 200px;
+    width: 150px; /* Set a fixed width for the logo */
     height: auto;
+    margin: 0 auto; /* Center the logo horizontally */
+}
+
+/* Title */
+.title {
+    font-family: 'PizzaMan', sans-serif; /* Use PizzaMan font for the title */
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin: 20px 0;
 }
 
 /* Game Content */
 .game-content {
     position: relative;
     width: 100%;
-    max-width: 600px;
+    max-width: 500px; /* Match the container width */
+    height: calc(100% - 80px); /* Adjust height for padding and header */
+    overflow: auto; /* Allow scrolling if needed */
 }
 
 .background {
@@ -40,6 +93,7 @@ header {
     top: 0;
     left: 0;
     z-index: -1;
+    opacity: 0.8; /* Slight transparency for visual effect */
 }
 
 .description {
@@ -61,13 +115,8 @@ header {
     background-color: #0056b3;
 }
 
-.intro-video {
-    width: 100%;
-    max-width: 500px;
-    margin: 20px 0;
-}
-
 /* Footer */
 footer {
     margin-top: 20px;
+    font-size: 14px;
 }
