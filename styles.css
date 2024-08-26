@@ -14,8 +14,13 @@ body, html {
 
 /* Content Container */
 .content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     color: white;
+    height: 100%;
 }
 
 /* Title Styling */
