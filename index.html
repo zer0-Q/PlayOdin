@@ -7,12 +7,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="game-container">
-        <h1>Odin's Crypto Adventure</h1>
-        <p id="status">Welcome to the game!</p>
-        <button id="attack-btn">Attack</button>
-        <button id="defend-btn">Defend</button>
-    </div>
+    <h1>Welcome to Odin's Crypto Adventure</h1>
+    <script>
+        // Check if Telegram Web Apps API is available
+        if (window.TelegramWebApps) {
+            TelegramWebApps.ready();
+        }
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
