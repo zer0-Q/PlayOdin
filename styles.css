@@ -4,96 +4,57 @@ body, html {
     padding: 0;
     width: 100%;
     height: 100%;
-    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Arial', sans-serif; /* Replace with your desired font */
 }
 
-/* Background Image Container */
-.background-image {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+/* Background Image */
+body {
+    background-image: url('img/background.png'); /* Path to your background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
 }
 
-.background-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Video container to ensure the video is fullscreen */
-.video-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
-    z-index: 1;
-}
-
-.intro-video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Container for the entire game */
-.container {
-    width: 500px;
-    height: 900px;
+/* Overlay Content Container */
+.overlay {
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 2;  /* Ensure it's above the background */
+    color: white;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better contrast */
+    padding: 20px;
+    border-radius: 10px;
 }
 
-/* Hide the container initially until the video ends */
-.hidden {
-    display: none;
-}
-
-/* Styling for the title */
+/* Title Styling */
 .title {
-    font-family: 'PizzaMan', sans-serif; /* Replace with your font family */
+    font-family: 'PizzaMan', sans-serif; /* Your custom font */
     font-size: 48px;
-    margin: 20px 0;
-    text-align: center;
-}
-
-/* Logo styling */
-.logo {
-    max-width: 150px;
     margin-bottom: 20px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
 }
 
-/* Styling for the description */
-.description {
-    font-size: 18px;
-    margin: 20px 0;
+/* Logo Styling */
+.logo {
+    width: 150px;
+    height: auto;
+    margin-bottom: 20px;
 }
 
-/* Styling for the Start Game button */
+/* Start Button Styling */
 .start-button {
     padding: 10px 20px;
     font-size: 18px;
-    cursor: pointer;
-    border: none;
     background-color: #ff8c00;
     color: white;
+    border: none;
     border-radius: 5px;
+    cursor: pointer;
     margin-top: 20px;
+}
+
+.start-button:hover {
+    background-color: #ff7000;
 }
