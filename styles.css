@@ -4,75 +4,78 @@ body, html {
     padding: 0;
     width: 100%;
     height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
 }
 
-/* Intro Video */
-.intro-video {
+/* Container for the entire game */
+.container {
+    width: 500px;
+    height: 900px;
+    background-color: #f0f0f0;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Hide the container initially until the video ends */
+.hidden {
+    display: none;
+}
+
+/* Video container to ensure the video is fullscreen */
+.video-container {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Cover the entire area */
-    z-index: 1; /* Ensure the video is behind the main content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
 }
 
-/* Main Content Container */
-.container {
-    display: none; /* Hide initially */
-    width: 500px;
-    height: 900px;
-    position: relative;
-    margin: auto;
-    background-color: #f0f0f0; /* Background color for the container */
-    text-align: center;
-    overflow: hidden;
-    z-index: 2; /* Ensure content is above the video */
-}
-
-/* Title */
-.title {
-    font-family: 'PizzaMan', sans-serif; /* Custom font for the title */
-    font-size: 3rem;
-    color: #333; /* Dark color for visibility */
-    margin: 20px 0;
-}
-
-/* Logo */
-.logo {
-    width: 150px; /* Fixed size for the logo */
-    height: auto;
-    margin: 20px auto; /* Center horizontally */
-}
-
-/* Game Content */
-.game-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.intro-video {
     width: 100%;
-    text-align: center;
+    height: 100%;
+    object-fit: cover;
 }
 
-/* Description Text */
-.description {
-    font-size: 1.2rem;
+/* Styling for the title */
+.title {
+    font-family: 'PizzaMan', sans-serif; /* Replace with your font family */
+    font-size: 48px;
     margin: 20px 0;
 }
 
-/* Start Button */
-.start-button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-top: 10px;
+/* Logo styling */
+.logo {
+    max-width: 150px;
+    margin-bottom: 20px;
 }
 
-.start-button:hover {
-    background-color: #0056b3;
+/* Styling for the description */
+.description {
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+/* Styling for the Start Game button */
+.start-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    background-color: #ff8c00;
+    color: white;
+    border-radius: 5px;
+    margin-top: 20px;
 }
