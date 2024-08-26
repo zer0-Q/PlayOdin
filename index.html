@@ -7,13 +7,26 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Welcome to Odin's Crypto Adventure</h1>
-    <script>
-        // Check if Telegram Web Apps API is available
-        if (window.TelegramWebApps) {
-            TelegramWebApps.ready();
-        }
-    </script>
+    <div class="container">
+        <header>
+            <h1>Welcome to Odin's Crypto Adventure!</h1>
+            <img src="your-logo.png" alt="Odin Logo" class="logo">
+        </header>
+        <main>
+            <div class="game-content">
+                <img src="background.jpg" alt="Game Background" class="background">
+                <p class="description">Embark on an epic journey with Odin and the $ODIN coin. Click below to begin!</p>
+                <button class="start-button">Start Game</button>
+                <video controls class="intro-video">
+                    <source src="intro.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </main>
+        <footer>
+            <p>Powered by $ODIN</p>
+        </footer>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
