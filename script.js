@@ -19,6 +19,13 @@ function updateStatus() {
     const status = document.getElementById('status');
     status.innerHTML = `Health: ${player.health}<br>Attack: ${player.attack}<br>Defense: ${player.defense}`;
 }
+document.addEventListener('DOMContentLoaded', () => {
+    const startButton = document.querySelector('.start-button');
+    startButton.addEventListener('click', () => {
+        // Logic to start the game
+        alert('Game started!');
+    });
+});
 
 // Initial update
 updateStatus();
