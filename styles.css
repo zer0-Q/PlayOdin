@@ -5,6 +5,9 @@ body, html {
     width: 100%;
     height: 100%;
     font-family: 'Arial', sans-serif; /* Replace with your desired font */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Content Container */
@@ -16,6 +19,7 @@ body, html {
     text-align: center;
     color: white;
     height: 100%;
+    width: 100%;
 }
 
 /* Title Styling */
@@ -42,7 +46,6 @@ body, html {
     border-radius: 5px;
     cursor: pointer;
     margin-top: 20px;
-    align-self: center; /* Center the button */
 }
 
 .start-button:hover {
